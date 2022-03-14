@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenu {
+    position: relative;
+    height: 160px;
+    width: 620px;
+    background: #4CDB6D;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenu ul {
+    position: relative;
+    display: flex;
+}
+
+.navMenu ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+.navMenu ul li a {
+    position: relative;
+    display: flex;
+    height: 220px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.navMenu ul li a i {
+    color: black;
+    font-size: 50px;
+    position: absolute;
+}
+
+.activeIcon {
+    opacity: 0;
+    transition: all 0.6s ease;
+    transition-delay: 0.2;
+}
+
+.navMenu ul li.active-list a i {
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 7px;
+    left: 43px;
+    width: 35px;
+    height: 46px;
+    background: black;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: #4CDB6D;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 0 black;
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    right: -17px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: #4CDB6D;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 0 black;
+}
